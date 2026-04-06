@@ -5,9 +5,15 @@
   <meta charset="UTF-8">
   <link rel="icon" href="/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vite App</title>
+  <title>优选商城</title>
+  <!-- 预连接：由于首页必然请求该后端 API，提前建立 TCP/TLS 通道 -->
+  <link rel="preconnect" href="https://pcapi-xiaotuxian-front-devtest.itheima.net" crossorigin>
+  <!-- DNS 预解析：商品图片可能来自于网易严选的 OSS CDN，提前解析其 IP 以加速后续的图片LCP渲染 -->
+  <link rel="dns-prefetch" href="https://yanxuan-item.nosdn.127.net">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_2143783_iq6z4ey5vu.css">
-  <script type="module" crossorigin src="/assets/index-58cdee36.js"></script>
+  <script type="module" crossorigin src="/assets/index-2d59e2e9.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vue-2cc9d655.js">
+  <link rel="modulepreload" crossorigin href="/assets/elementPlus-6ef019bd.js">
   <link rel="stylesheet" href="/assets/index-7074490b.css">
 </head>
 

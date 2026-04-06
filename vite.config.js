@@ -7,6 +7,8 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { visualizer } from 'rollup-plugin-visualizer'
+import viteCompression from 'vite-plugin-compression'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,6 +24,8 @@ export default defineConfig({
         ElementPlusResolver({ importStyle: "sass" }),
       ],
     }),
+    visualizer({ open: true, filename: 'stats.html', gzipSize: true, brotliSize: true }),
+    viteCompression({ verbose: true, disable: false, threshold: 10240, algorithm: 'gzip', ext: '.gz' })
   ],
   resolve: {
     // 实际的路径转换  @  -> src
@@ -43,5 +47,15 @@ export default defineConfig({
   server: {
     port: 3000,  // 设置开发服务器端口为 3000
     open: true   // 自动打开浏览器
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vue: ['vue', 'vue-router', 'pinia'],
+          elementPlus: ['element-plus'],
+        }
+      }
+    }
   }
 })

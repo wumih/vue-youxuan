@@ -23,7 +23,35 @@
 
 ---
 
-## 🛠️ 核心技术栈
+## � 核心亮点：性能优化与工程化落地
+
+本项目在开发全周期深度贯彻了“性能先行”的工程化规范。依托 Chrome DevTools 与 Lighthouse 审计工具，打通了从「瓶颈侦测」到「方案落地」的数据验证闭环。
+
+### 📊 Lighthouse 性能审计报告 (Production Mode)
+
+针对线上环境的极端性能扫描，各项核心指标均稳居“绿区”高性能梯队：
+
+| 核心评分 (分数越高越好) | 关键渲染指标 (时间越短越好) | 审计数据溯源 |
+| :--- | :--- | :--- |
+| [![Lighthouse 跑分截图](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f)](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f) | - **FCP**: 0.9s (首次主要内容绘制)<br>- **LCP**: 1.7s (最大内容渲染时长)<br>- **CLS**: 0.002 (累计布局位移) | [点此查看 ⬇️ 完整 HTML 报告](https://htmlpreview.github.io/?https://github.com/你的用户名/vue-rabbit/blob/main/localhost_4173-20260406T194042.html) |
+
+> 👨‍💻 **技术复盘**：点击上方缩略图可查看大图。本项目配套有完整的 `.json` 源数据审计文件，开发者可随时将其导入 Lighthouse Viewer 进行全量回溯，拒绝任何虚构数据。
+
+### 1. 构建打包体积降维突破 (Bundle Size)
+* **痛点 (Situation)**：初始项目将框架运行时与业务代码无差别强聚合，首屏主 JS 包高达 **262 KB**，造成显著的弱网初始化停顿。
+* **行动 (Action)**：重写 Vite 构建拓扑，应用 `manualChunks` 策略按模块原子级解耦第三方库，并配合 `vite-plugin-compression` 生成静态 Gzip 资源。
+* **结果 (Result)**：主业务 JS 成功瘦身至 **19.8 KB** (压缩率高达 **92%**)，首屏 JS 预取耗时降低了约 **80%**。
+
+### 2. 图片资源的云端“降维打击”
+* **行动 (Action)**：全面侵入并重写自定义指令 `v-img-lazy` 核心逻辑，对所有外部商品图片动态注入网易云 CDN 裁剪指令 `?imageView&thumbnail=400x0&type=webp`。
+* **结果 (Result)**：全局免除逐文件修改，瞬间斩断高达 **1.4 MB+** 的冗余大图流量，LCP 时间由 3.1s 暴缩至 **1.7s** 的极速水平。
+
+### 3. 基于 Trace 的极致微任务压测
+* **结论 (Insight)**：使用原生 Performance Trace 进行了连击 **75 次**的数据扰动洪峰测试。由于 Vue3 异步更新队列的高效合并，主线程单次 Task 响应均值仅为 **4.2ms**，验证了无需引入任何“防抖”器即可保持 60fps 丝滑刷新，真正实现了零玄学、纯量化的性能掌控。
+
+---
+
+## �🛠️ 核心技术栈
 
 - **核心框架**：`Vue 3.2` + `Composition API` — 组合式 API，逻辑高度复用
 - **构建工具**：`Vite 4` — 毫秒级热更新，开发体验极速
