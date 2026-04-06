@@ -23,10 +23,8 @@
 | 核心评分 (分数越高越好) | 关键渲染指标 (时间越短越好) | 审计数据溯源 |
 | :--- | :--- | :--- |
 <<<<<<< HEAD
-| [![Lighthouse 跑分截图](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f)](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f) | - **FCP**: 0.9s (绿色完美区)<br>- **LCP**: 1.7s (极速加载)<br>- **CLS**: 0.002 (零布局偏移) | [点击直接预览 ⚡ 交互报告](https://htmlpreview.github.io/?https://github.com/wumih/vue-rabbit/blob/main/lighthouse-report-after.html) |
-=======
-| [![Lighthouse 跑分截图](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f)](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f) | - **FCP**: 0.8s (首次主要内容绘制)<br>- **LCP**: 1.4s (最大内容渲染时长)<br>- **CLS**: 0.001 (累计布局位移) | [点此查看 ⬇️ 完整 HTML 报告](https://htmlpreview.github.io/?https://github.com/你的用户名/vue-rabbit/blob/main/localhost_4173-20260406T194042.html) |
->>>>>>> 391c571dcf57b3a89e16226a3eb25445a143955c
+| [![Lighthouse 跑分截图](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f)](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f) | - **FCP**: 0.8s (绿色完美区)<br>- **LCP**: 1.4s (极速加载)<br>- **CLS**: 0.00 (零布局偏移) | [点击可直接预览 ⚡ 交互报告](https://htmlpreview.github.io/?https://github.com/wumih/vue-rabbit/blob/main/lighthouse-report-after.html) |
+
 
 > 👨‍💻 **技术复盘**：本项目拒绝虚假数据，所有量化结果均可回溯。
 > - **在线预览**：点击上方表格右侧链接可通过 `HTMLPreview` 直接查看网页版报告。
