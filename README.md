@@ -22,7 +22,6 @@
 
 | 核心评分 (分数越高越好) | 关键渲染指标 (时间越短越好) | 审计数据溯源 |
 | :--- | :--- | :--- |
-<<<<<<< HEAD
 | [![Lighthouse 跑分截图](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f)](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f) | - **FCP**: 0.8s (绿色完美区)<br>- **LCP**: 1.4s (极速加载)<br>- **CLS**: 0.00 (零布局偏移) | [点击可直接预览 ⚡ 交互报告](https://htmlpreview.github.io/?https://github.com/wumih/vue-rabbit/blob/main/lighthouse-report-after.html) |
 
 
