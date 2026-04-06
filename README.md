@@ -38,7 +38,7 @@
 
 | 核心评分 (分数越高越好) | 关键渲染指标 (时间越短越好) | 审计数据溯源 |
 | :--- | :--- | :--- |
-| ![Lighthouse 跑分截图](你的截图地址) | - **FCP**: 0.9s (绿色完美区)<br>- **LCP**: 1.7s (极速加载)<br>- **CLS**: 0.001 (零布局偏移) | [点击查看 ⬇️ 完整交互报告](https://htmlpreview.github.io/?你的GitHub文件链接) |
+| ![Lighthouse 跑分截图](<img width="944" height="699" alt="Image" src="https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f" />) | - **FCP**: 0.9s (绿色完美区)<br>- **LCP**: 1.7s (极速加载)<br>- **CLS**: 0.001 (零布局偏移) | [点击查看 ⬇️ 完整交互报告](https://htmlpreview.github.io/?你的GitHub文件链接) |
 
 > 👨‍💻 **技术复盘**：本项目拒绝虚假的“大幅提升”，所有量化数据均基于真实的 Trace 事件分析。开发者可以通过导入仓库内的 `docs/lighthouse-data.json` 至测试工具进行数据对质。
 
