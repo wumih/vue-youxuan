@@ -22,7 +22,7 @@
 
 | 核心评分 (分数越高越好) | 关键渲染指标 (时间越短越好) | 审计数据溯源 |
 | :--- | :--- | :--- |
-| [![Lighthouse 跑分截图](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f)](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f) | - **FCP**: 0.9s (首次主要内容绘制)<br>- **LCP**: 1.7s (最大内容渲染时长)<br>- **CLS**: 0.002 (累计布局位移) | [点此查看 ⬇️ 完整 HTML 报告](https://htmlpreview.github.io/?https://github.com/你的用户名/vue-rabbit/blob/main/localhost_4173-20260406T194042.html) |
+| [![Lighthouse 跑分截图](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f)](https://github.com/user-attachments/assets/0b138840-3757-4a69-a09e-020b129e058f) | - **FCP**: 0.8s (首次主要内容绘制)<br>- **LCP**: 1.4s (最大内容渲染时长)<br>- **CLS**: 0.001 (累计布局位移) | [点此查看 ⬇️ 完整 HTML 报告](https://htmlpreview.github.io/?https://github.com/你的用户名/vue-rabbit/blob/main/localhost_4173-20260406T194042.html) |
 
 > 👨‍💻 **技术复盘**：点击上表中的【得分缩略图】即可跳转查看原图。本项目配套有完整的 `.json` 源数据审计文件，开发者可随时将其导入 Lighthouse Viewer 进行全量回溯。
 
