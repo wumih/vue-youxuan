@@ -21,7 +21,7 @@
 - **痛点 (Situation)**：初始项目将 Vue 运行时、Element Plus 组件树与核心业务逻辑实施了无差别打包。首屏单挂载核心文件高达 **262 KB**，在弱网环境下造成明显的白屏解析停顿。
 - **行动 (Action)**：引入 `rollup-plugin-visualizer` 插件构建模块空间雷达体系；重写 Vite 的 `build.rollupOptions.manualChunks` 拓扑树，将基础运行框架从变动更密集的业务代码中解耦抽离；并全局植入 `vite-plugin-compression` 执行静态 Gzip 编译层压缩。
 - **结果 (Result)**：主包分离后核心业务代码体积从 **262 KB** 暴降至 **19.8 KB**（瘦身率达 **92%**），同时利用浏览器长效控制机制安全缓存第三方依赖，直接清除了下行链路的最大负载屏障。
-
+<img width="1734" height="933" alt="Image" src="https://github.com/user-attachments/assets/b3d345dd-8c4f-4316-bcd7-ee7b48a855e6" />
 ### 2. 核心渲染路径与 LCP 指标攻坚
 
 - **痛点 (Situation)**：作为电商平台，海量的楼层商品与超级轮播图构成天然的渲染瓶颈。原基准线下 Lighthouse 评级警报亮起，最大内容绘制耗时 (LCP) 探底被拖慢至 **3.1 s**，且无用原图带来的网络负载高达 6.6 MB。
